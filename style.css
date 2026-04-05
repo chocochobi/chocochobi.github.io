@@ -1,0 +1,737 @@
+/* ===== リセット & ベース ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy:    #1a2e4a;
+  --navy-mid:#243a5e;
+  --gold:    #b8965a;
+  --gold-lt: #d4b07a;
+  --gray-dk: #333740;
+  --gray-md: #666c77;
+  --gray-lt: #f4f5f7;
+  --white:   #ffffff;
+  --border:  #dde1e8;
+  --radius:  6px;
+  --shadow:  0 4px 24px rgba(0,0,0,0.08);
+  --transition: 0.25s ease;
+  --max-w:   1100px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--gray-dk);
+  background: var(--white);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img { display: block; max-width: 100%; }
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== ナビバー ===== */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(26, 46, 74, 0.97);
+  backdrop-filter: blur(6px);
+}
+
+.navbar {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow var(--transition);
+}
+
+.navbar.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+}
+
+.logo-mark {
+  background: var(--gold);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 15px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.logo-text {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--white);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  transition: color var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--gold-lt);
+}
+
+.btn-contact {
+  background: var(--gold) !important;
+  color: var(--white) !important;
+  padding: 9px 22px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: background var(--transition) !important;
+}
+
+.btn-contact:hover {
+  background: var(--gold-lt) !important;
+}
+
+/* ===== ヒーロー ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #0e1c30 0%, #1a2e4a 45%, #243a5e 100%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 79px,
+      rgba(255,255,255,0.025) 79px,
+      rgba(255,255,255,0.025) 80px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 79px,
+      rgba(255,255,255,0.025) 79px,
+      rgba(255,255,255,0.025) 80px
+    );
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  right: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(184,150,90,0.12) 0%, transparent 70%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+  padding-top: 68px;
+}
+
+.hero-sub {
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.35;
+  margin-bottom: 24px;
+  letter-spacing: 0.03em;
+}
+
+.hero-desc {
+  color: rgba(255,255,255,0.72);
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--white);
+  padding: 15px 40px;
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 4px 16px rgba(184,150,90,0.4);
+}
+
+.btn-primary:hover {
+  background: var(--gold-lt);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(184,150,90,0.5);
+}
+
+/* ===== セクション共通 ===== */
+.section {
+  padding: 100px 0;
+}
+
+.section-label {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-label.light { color: var(--gold-lt); }
+
+.section-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 56px;
+  letter-spacing: 0.04em;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 48px; height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+.section-title.light { color: var(--white); }
+.section-title.light::after { background: var(--gold-lt); }
+
+/* ===== 事務所について ===== */
+.about { background: var(--white); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.about-text p {
+  color: var(--gray-md);
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.stat {
+  background: var(--navy);
+  border-radius: 8px;
+  padding: 28px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.stat-number small {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.05em;
+}
+
+/* ===== 取扱分野 ===== */
+.practice { background: var(--gray-lt); }
+
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.practice-card {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 36px 28px;
+  border: 1px solid var(--border);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.practice-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: var(--gold);
+}
+
+.practice-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(26,46,74,0.06);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--navy);
+  padding: 10px;
+}
+
+.practice-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.practice-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+.practice-card p {
+  font-size: 14px;
+  color: var(--gray-md);
+  line-height: 1.8;
+}
+
+/* ===== 弁護士紹介 ===== */
+.attorneys { background: var(--white); }
+
+.attorneys-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.attorney-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow var(--transition);
+}
+
+.attorney-card:hover {
+  box-shadow: var(--shadow);
+}
+
+.attorney-photo {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attorney-photo-1 { background: linear-gradient(135deg, #1a2e4a 0%, #2d4a6e 100%); }
+.attorney-photo-2 { background: linear-gradient(135deg, #2c3e50 0%, #3d5a73 100%); }
+.attorney-photo-3 { background: linear-gradient(135deg, #243a5e 0%, #3a5580 100%); }
+
+.photo-placeholder {
+  width: 90px;
+  height: 90px;
+  background: rgba(255,255,255,0.15);
+  border: 3px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.05em;
+}
+
+.attorney-info {
+  padding: 28px;
+}
+
+.attorney-info h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.04em;
+}
+
+.attorney-title {
+  font-size: 13px;
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+.attorney-divider {
+  width: 36px;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 1px;
+  margin: 16px 0;
+}
+
+.attorney-details {
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+.attorney-details li {
+  font-size: 13px;
+  color: var(--gray-md);
+  padding: 3px 0;
+  padding-left: 14px;
+  position: relative;
+}
+
+.attorney-details li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 10px;
+  top: 4px;
+}
+
+.attorney-message {
+  font-size: 13px;
+  color: var(--gray-md);
+  font-style: italic;
+  line-height: 1.75;
+  border-left: 3px solid var(--gold);
+  padding-left: 14px;
+  background: rgba(184,150,90,0.05);
+  padding: 12px 14px;
+  border-radius: 0 4px 4px 0;
+}
+
+/* ===== お問い合わせ ===== */
+.contact {
+  background: var(--navy);
+}
+
+.contact .section-title { margin-bottom: 16px; }
+
+.contact-intro {
+  color: rgba(255,255,255,0.7);
+  font-size: 15px;
+  margin-bottom: 56px;
+  line-height: 2;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  flex-shrink: 0;
+  padding: 10px;
+}
+
+.contact-icon svg { width: 100%; height: 100%; }
+
+.contact-label {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.contact-value {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.03em;
+}
+
+.contact-note {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 2px;
+}
+
+/* フォーム */
+.contact-form {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 8px;
+  letter-spacing: 0.03em;
+}
+
+.required {
+  background: var(--gold);
+  color: var(--white);
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--white);
+  font-family: inherit;
+  transition: border-color var(--transition), background var(--transition);
+  outline: none;
+  appearance: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+
+.form-group select option {
+  background: var(--navy-mid);
+  color: var(--white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+  background: rgba(255,255,255,0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-submit {
+  width: 100%;
+  background: var(--gold);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  font-family: inherit;
+  margin-top: 8px;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: var(--gold-lt);
+  transform: translateY(-1px);
+}
+
+.btn-submit:disabled {
+  cursor: default;
+}
+
+.form-note {
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  text-align: center;
+  margin-top: 14px;
+  line-height: 1.7;
+}
+
+/* ===== フッター ===== */
+.footer {
+  background: #0e1c30;
+  padding: 40px 0;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 28px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+}
+
+.footer-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.footer-nav a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  transition: color var(--transition);
+}
+
+.footer-nav a:hover { color: var(--gold-lt); }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p {
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+}
+
+.footer-note {
+  font-size: 12px;
+  color: rgba(255,255,255,0.25);
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 900px) {
+  .nav-links { gap: 20px; }
+  .nav-links li:not(:last-child) a { font-size: 13px; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+
+  .practice-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .attorneys-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .contact-wrapper { grid-template-columns: 1fr; gap: 40px; }
+  .contact-info { flex-direction: row; flex-wrap: wrap; gap: 24px; }
+  .contact-item { flex: 1 1 200px; }
+}
+
+@media (max-width: 640px) {
+  .section { padding: 72px 0; }
+
+  .navbar { height: 60px; }
+  .nav-links { display: none; }
+
+  .hero h1 { font-size: 1.8rem; }
+
+  .about-stats { grid-template-columns: repeat(3, 1fr); }
+
+  .practice-grid { grid-template-columns: 1fr; }
+
+  .attorneys-grid { grid-template-columns: 1fr; }
+
+  .contact-form { padding: 28px 20px; }
+
+  .footer-top { flex-direction: column; gap: 20px; text-align: center; }
+  .footer-nav { flex-wrap: wrap; justify-content: center; gap: 16px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
