@@ -263,6 +263,7 @@
         </div>
 
         <form class="contact-form" onsubmit="handleSubmit(event)">
+          <input type="hidden" name="_subject" value="【サイトお問い合わせ】山田法律事務所">
           <div class="form-group">
             <label for="name">お名前 <span class="required">必須</span></label>
             <input type="text" id="name" name="name" placeholder="山田 太郎" required>
@@ -343,13 +344,33 @@
       }
     });
 
-    // フォーム送信
-    function handleSubmit(e) {
+    // フォーム送信（Formspree経由でメール送信）
+    async function handleSubmit(e) {
       e.preventDefault();
-      const btn = e.target.querySelector('.btn-submit');
-      btn.textContent = '送信完了しました';
+      const form = e.target;
+      const btn = form.querySelector('.btn-submit');
       btn.disabled = true;
-      btn.style.background = '#4a7c59';
+      btn.textContent = '送信中...';
+      try {
+        const res = await fetch('https://formspree.io/f/mdajvoal', {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          btn.textContent = '送信完了しました';
+          btn.style.background = '#4a7c59';
+          form.reset();
+        } else {
+          btn.disabled = false;
+          btn.textContent = '送信する';
+          alert('送信に失敗しました。お手数ですが、お電話にてお問い合わせください。');
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = '送信する';
+        alert('送信に失敗しました。通信環境をご確認のうえ、再度お試しください。');
+      }
     }
   </script>
 
