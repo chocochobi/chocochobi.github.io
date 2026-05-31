@@ -21,8 +21,14 @@
     .hairline{width:46px;height:1px;background:var(--gold);margin:22px 0 0}
     .center{text-align:center}.center .hairline{margin:22px auto 40px}
     .lead{color:var(--ink-soft);max-width:600px}
-    .ph{background:linear-gradient(150deg,#dfe7ec 0%,#ecdfd9 55%,#f3ecdd 100%);position:relative;display:flex;align-items:flex-end;justify-content:center;color:rgba(120,108,90,.8);font-size:11px;letter-spacing:.3em;padding:16px;overflow:hidden}
-    .ph::before{content:"";position:absolute;inset:10px;border:1px solid rgba(176,141,79,.35)}
+    .ph{position:relative;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;background:linear-gradient(172deg,#e3ecf2 0%,#ece0da 58%,#f4ecdc 100%)}
+    .ph::before{content:"";position:absolute;inset:10px;border:1px solid rgba(176,141,79,.3);z-index:2;pointer-events:none}
+    .ph::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 60% at 50% 0,rgba(255,255,255,.25),transparent 70%)}
+    .ph .dancer{position:relative;z-index:1;width:42%;max-width:140px;margin-bottom:7%}
+    .ph--dawn{background:linear-gradient(176deg,#dde7f0 0%,#ecdfe0 58%,#f5ecdb 100%)}
+    .ph--day{background:linear-gradient(176deg,#d6e5ef 0%,#e8ecde 68%,#f5efdc 100%)}
+    .ph--gold{background:linear-gradient(176deg,#f1e4cf 0%,#ecd7bf 58%,#e4c6a2 100%)}
+    .ph--dusk{background:linear-gradient(176deg,#c9cfe1 0%,#d6cbd6 55%,#e6d6cd 100%)}
 
     header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(251,248,242,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
     .nav{height:74px;display:flex;align-items:center;justify-content:space-between}
@@ -115,14 +121,17 @@
       <p>バレトンを軸に、からだ・こころ・くらしを整えるスタジオ。空や音に溶けるような、心地よい時間をあなたに。</p>
       <a class="btn" href="#contact">ご予約・お問い合わせ</a>
     </div>
-    <div class="ph hero-ph">PHOTO</div>
+    <div class="ph hero-ph ph--gold"><svg class="dancer" viewBox="0 0 120 210" fill="#9c7b3e" fill-opacity=".8" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="24" r="10"/><path d="M60 40 C70 44 80 40 96 24 C99 22 102 25 100 28 C86 46 74 52 62 50 Z"/><path d="M58 44 C46 46 34 52 18 66 C15 69 18 72 21 70 C38 58 50 54 60 54 Z"/><path d="M60 40 C64 40 66 44 66 50 L66 92 C84 110 92 150 88 196 L76 196 C74 160 68 130 60 118 C52 130 46 160 44 196 L32 196 C28 150 36 110 54 92 L54 50 C54 44 56 40 60 40 Z"/></svg></div>
   </div></div></section>
 
   <section id="expr" class="expr"><div class="wrap">
     <p class="label" style="text-align:center">Expression</p>
     <p class="poem serif">空と音に、溶けるように。<small>うごくほどに、自分がひらいていく時間を。</small></p>
     <div class="gallery">
-      <div class="ph">PHOTO</div><div class="ph">PHOTO</div><div class="ph">PHOTO</div><div class="ph">PHOTO</div>
+      <div class="ph ph--dawn"><svg class="dancer" viewBox="0 0 120 210" fill="#9c7b3e" fill-opacity=".72" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="24" r="10"/><path d="M60 40 C70 44 80 40 96 24 C99 22 102 25 100 28 C86 46 74 52 62 50 Z"/><path d="M58 44 C46 46 34 52 18 66 C15 69 18 72 21 70 C38 58 50 54 60 54 Z"/><path d="M60 40 C64 40 66 44 66 50 L66 92 C84 110 92 150 88 196 L76 196 C74 160 68 130 60 118 C52 130 46 160 44 196 L32 196 C28 150 36 110 54 92 L54 50 C54 44 56 40 60 40 Z"/></svg></div>
+      <div class="ph ph--day"><svg class="dancer" viewBox="0 0 120 210" fill="#9c7b3e" fill-opacity=".72" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="24" r="10"/><path d="M60 40 C70 44 80 40 96 24 C99 22 102 25 100 28 C86 46 74 52 62 50 Z"/><path d="M58 44 C46 46 34 52 18 66 C15 69 18 72 21 70 C38 58 50 54 60 54 Z"/><path d="M60 40 C64 40 66 44 66 50 L66 92 C84 110 92 150 88 196 L76 196 C74 160 68 130 60 118 C52 130 46 160 44 196 L32 196 C28 150 36 110 54 92 L54 50 C54 44 56 40 60 40 Z"/></svg></div>
+      <div class="ph ph--gold"><svg class="dancer" viewBox="0 0 120 210" fill="#9c7b3e" fill-opacity=".72" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="24" r="10"/><path d="M60 40 C70 44 80 40 96 24 C99 22 102 25 100 28 C86 46 74 52 62 50 Z"/><path d="M58 44 C46 46 34 52 18 66 C15 69 18 72 21 70 C38 58 50 54 60 54 Z"/><path d="M60 40 C64 40 66 44 66 50 L66 92 C84 110 92 150 88 196 L76 196 C74 160 68 130 60 118 C52 130 46 160 44 196 L32 196 C28 150 36 110 54 92 L54 50 C54 44 56 40 60 40 Z"/></svg></div>
+      <div class="ph ph--dusk"><svg class="dancer" viewBox="0 0 120 210" fill="#9c7b3e" fill-opacity=".72" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="24" r="10"/><path d="M60 40 C70 44 80 40 96 24 C99 22 102 25 100 28 C86 46 74 52 62 50 Z"/><path d="M58 44 C46 46 34 52 18 66 C15 69 18 72 21 70 C38 58 50 54 60 54 Z"/><path d="M60 40 C64 40 66 44 66 50 L66 92 C84 110 92 150 88 196 L76 196 C74 160 68 130 60 118 C52 130 46 160 44 196 L32 196 C28 150 36 110 54 92 L54 50 C54 44 56 40 60 40 Z"/></svg></div>
     </div>
   </div></section>
 
