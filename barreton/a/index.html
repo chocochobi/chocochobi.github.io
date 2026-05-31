@@ -34,7 +34,11 @@
     .brand{display:flex;align-items:center;gap:10px}
     .brand svg{width:28px;height:28px}
     .brand .nm{font-size:17px;letter-spacing:.16em;color:var(--gold-dk)}
-    .brand-logo{height:56px;width:auto;display:block;mix-blend-mode:multiply}
+    .brand-logo{height:50px;width:auto;display:block;mix-blend-mode:multiply}
+    .brand-text{display:flex;flex-direction:column;line-height:1.15}
+    .bt-main{font-size:18px;letter-spacing:.14em;color:var(--gold-dk)}
+    .bt-sub{font-size:8.5px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-top:4px}
+    @media(max-width:420px){.bt-sub{display:none}.bt-main{font-size:16px}}
     .nav-links{display:flex;gap:24px;font-size:12.5px;letter-spacing:.06em}
     .nav-links a:hover{color:var(--gold)}
     .ig{border:1px solid var(--gold);color:var(--gold-dk);padding:8px 16px;border-radius:30px;font-size:12px;letter-spacing:.08em}
@@ -112,6 +116,10 @@
   <header><div class="wrap nav">
     <a class="brand" href="#top">
       <img class="brand-logo" src="img/logo.jpg" alt="ManaLilia Movement Studio">
+      <span class="brand-text">
+        <span class="bt-main serif">ManaLilia</span>
+        <span class="bt-sub">Movement Studio</span>
+      </span>
     </a>
     <nav class="nav-links">
       <a href="#expr">Expression</a><a href="#about">スタジオ</a><a href="#group">レッスン</a><a href="#session">個別</a><a href="#contact">ご予約</a>
