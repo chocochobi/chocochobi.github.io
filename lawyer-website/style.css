@@ -376,6 +376,11 @@ header {
   gap: 28px;
 }
 
+.attorneys-grid--single {
+  grid-template-columns: minmax(0, 440px);
+  justify-content: center;
+}
+
 .attorney-card {
   border: 1px solid var(--border);
   border-radius: 10px;
