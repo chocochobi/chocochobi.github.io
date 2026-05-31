@@ -893,3 +893,17 @@ header {
   .subpage-header { padding: 120px 0 48px; }
   .column-card { padding: 22px 20px; }
 }
+
+/* ===== お問い合わせ 地図 ===== */
+.contact-map {
+  margin-top: 48px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  line-height: 0;
+}
+
+.contact-map iframe {
+  display: block;
+  width: 100%;
+}
