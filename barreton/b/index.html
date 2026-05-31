@@ -4,151 +4,168 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
-  <title>mana lilia｜バレトン教室（案B・ナチュラル）</title>
+  <title>ManaLilia Movement Studio｜バレトン・暮らしを整えるスタジオ（案B）</title>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
-      --bark:#3f4738; --soft:#6c7563; --sage:#8a9a7b; --sage-dk:#6f8466;
-      --cream:#f4f0e6; --cream2:#eae2d3; --terra:#c97b5a; --line:#ddd6c5;
+      --ink:#3a342b; --ink-soft:#7d7466; --ivory:#fcfaf4; --cream:#f4eede;
+      --gold:#a9853f; --gold-lt:#c4a262; --gold-dk:#8a6c2f; --line:#e7ddc9;
     }
-    body{font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;color:var(--bark);background:var(--cream);line-height:2;font-size:16px}
+    body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Meiryo",sans-serif;color:var(--ink);background:var(--ivory);line-height:1.95;font-size:16px;-webkit-font-smoothing:antialiased}
+    .serif{font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif}
     a{color:inherit;text-decoration:none}
-    .wrap{max-width:1000px;margin:0 auto;padding:0 26px}
-    section{padding:104px 0}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+    section{padding:96px 0}
+    .idx{font-size:12px;letter-spacing:.2em;color:var(--gold);font-weight:700;margin-bottom:10px}
+    .h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:500;letter-spacing:.08em;line-height:1.5}
+    .sec-head{display:flex;align-items:baseline;gap:18px;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:40px}
+    .sec-head .h2{margin:0}
+    .sec-head .en{margin-left:auto;font-size:11px;letter-spacing:.3em;color:var(--gold-lt);text-transform:uppercase}
 
-    header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(244,240,230,.9);backdrop-filter:blur(8px)}
-    .nav{height:74px;display:flex;align-items:center;justify-content:space-between}
-    .brand{font-size:21px;font-weight:700;letter-spacing:.06em;color:var(--sage-dk)}
-    .nav-links{display:flex;gap:28px;font-size:13.5px}
-    .nav-links a:hover{color:var(--terra)}
-    .ig{background:var(--sage-dk);color:#fff;padding:9px 18px;border-radius:30px;font-size:12.5px}
-    .ig:hover{background:var(--bark)}
-    @media(max-width:760px){.nav-links{display:none}}
+    header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(252,250,244,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand svg{width:26px;height:26px}
+    .brand .nm{font-size:16px;letter-spacing:.16em;color:var(--gold-dk)}
+    .nav-links{display:flex;gap:24px;font-size:12.5px;letter-spacing:.06em}
+    .nav-links a:hover{color:var(--gold)}
+    .ig{border:1px solid var(--gold);color:var(--gold-dk);padding:8px 15px;border-radius:4px;font-size:11.5px;letter-spacing:.1em}
+    .ig:hover{background:var(--gold);color:#fff}
+    @media(max-width:840px){.nav-links{display:none}}
 
-    .hero{position:relative;min-height:100vh;display:flex;align-items:center;background:
-      radial-gradient(120% 90% at 80% 10%,#e7ead7 0%,transparent 55%),
-      linear-gradient(160deg,#f4f0e6 0%,#eae2d3 100%);overflow:hidden}
-    .blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.5}
-    .blob.b1{width:360px;height:360px;background:#c7d3b3;right:-80px;top:8%}
-    .blob.b2{width:240px;height:240px;background:#e6c3ad;left:-60px;bottom:6%}
-    .hero-inner{position:relative;z-index:1;padding-top:74px}
-    .pill{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--sage-dk);font-size:12px;letter-spacing:.18em;padding:7px 18px;border-radius:30px;margin-bottom:26px}
-    .hero h1{font-size:clamp(2.2rem,6vw,3.8rem);font-weight:700;line-height:1.55;letter-spacing:.04em;margin-bottom:26px}
-    .hero h1 em{font-style:normal;color:var(--sage-dk)}
-    .hero p{max-width:440px;color:var(--soft);margin-bottom:40px}
-    .btn{display:inline-block;background:var(--terra);color:#fff;padding:16px 40px;border-radius:40px;font-weight:700;font-size:14px;letter-spacing:.06em;box-shadow:0 10px 24px rgba(201,123,90,.28);transition:.25s}
-    .btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(201,123,90,.36)}
+    .hero{min-height:100vh;display:flex;align-items:center;background:var(--ivory)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;padding-top:72px;width:100%}
+    .hero .kick{font-size:12px;letter-spacing:.32em;color:var(--gold);margin-bottom:24px}
+    .hero h1{font-size:clamp(2rem,4.6vw,3.2rem);font-weight:500;letter-spacing:.06em;line-height:1.55;margin-bottom:26px}
+    .hero p{color:var(--ink-soft);max-width:440px;margin-bottom:38px}
+    .btn{display:inline-block;background:var(--gold);color:#fff;padding:15px 38px;border-radius:4px;font-size:13px;letter-spacing:.12em;transition:.25s}
+    .btn:hover{background:var(--gold-dk)}
+    .hero-art{aspect-ratio:3/4;border:1px solid var(--gold);border-radius:4px;position:relative;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#faf4e6,#efe3c9)}
+    .hero-art .frame{position:absolute;inset:14px;border:1px solid rgba(169,133,63,.4)}
+    .hero-art .vt{position:absolute;right:18px;top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;font-size:11px;letter-spacing:.5em;color:var(--gold-dk)}
+    @media(max-width:840px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero-art{max-width:300px}}
 
-    .label{display:inline-block;font-size:12px;letter-spacing:.22em;color:var(--terra);margin-bottom:14px}
-    .h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:700;letter-spacing:.04em;line-height:1.6;margin-bottom:42px}
-    .about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-    .about .ph{aspect-ratio:1;border-radius:40px;background:linear-gradient(135deg,#bccca6,#9fb487);display:flex;align-items:flex-end;justify-content:center;color:rgba(255,255,255,.9);font-size:12px;letter-spacing:.3em;padding:18px}
-    .about p{color:var(--soft);margin-bottom:16px}
-    @media(max-width:760px){.about{grid-template-columns:1fr;gap:30px}}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+    .about-grid p{color:var(--ink-soft)}
+    .three{display:grid;gap:16px}
+    .three .it{border-left:2px solid var(--gold);padding-left:18px}
+    .three .it b{display:block;letter-spacing:.1em;font-weight:600;margin-bottom:2px}
+    .three .it span{font-size:13px;color:var(--ink-soft)}
+    @media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:28px}}
 
-    .lessons{background:var(--cream2);border-radius:60px 60px 0 0}
-    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-    .card{background:var(--cream);border-radius:24px;padding:32px 30px}
-    .card h3{font-size:19px;margin-bottom:6px}
-    .card .t{font-size:12px;color:var(--terra);letter-spacing:.1em;margin-bottom:12px}
-    .card p{font-size:13.5px;color:var(--soft)}
-    @media(max-width:680px){.cards{grid-template-columns:1fr}}
+    .lessons{background:var(--cream)}
+    .ltable{display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+    .lrow{padding:22px 0;border-bottom:1px solid var(--line)}
+    .lrow .t{font-weight:600;letter-spacing:.04em}
+    .lrow .t small{font-weight:400;font-size:11.5px;color:var(--gold-dk);margin-left:8px;letter-spacing:.08em}
+    .lrow p{font-size:13px;color:var(--ink-soft);margin-top:2px}
+    .feebar{grid-column:1/-1;margin-top:26px;display:flex;flex-wrap:wrap;gap:12px 30px;background:#fff;border:1px solid var(--line);border-radius:4px;padding:18px 24px;font-size:14px}
+    .feebar b{color:var(--gold-dk);font-weight:600}
+    @media(max-width:680px){.ltable{grid-template-columns:1fr}}
 
-    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:center}
-    .step{background:#fff;border-radius:24px;padding:34px 22px}
-    .step .num{width:44px;height:44px;border-radius:50%;background:var(--sage);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin:0 auto 16px}
-    .step h3{font-size:16px;margin-bottom:8px}
-    .step p{font-size:13px;color:var(--soft)}
-    @media(max-width:680px){.steps{grid-template-columns:1fr}}
+    .ses-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .ses{border:1px solid var(--line);border-radius:4px;padding:28px 24px;background:#fff}
+    .ses h3{font-size:16px;font-weight:600;letter-spacing:.04em;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+    .ses p{font-size:13px;color:var(--ink-soft)}
+    .ses-note{margin-top:24px;font-size:14px}.ses-note b{color:var(--gold-dk)}
+    @media(max-width:760px){.ses-grid{grid-template-columns:1fr}}
 
-    .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
-    .price{background:var(--cream2);border-radius:24px;padding:38px 22px}
-    .price .n{font-size:13px;color:var(--sage-dk);margin-bottom:12px}
-    .price .v{font-size:30px;font-weight:700}.price .v small{font-size:13px;color:var(--soft)}
-    @media(max-width:680px){.price-grid{grid-template-columns:1fr}}
+    .loc{display:flex;gap:24px;flex-wrap:wrap}
+    .loc .l{flex:1;min-width:240px;border:1px solid var(--line);border-radius:4px;padding:26px;background:#fff}
+    .loc .l b{letter-spacing:.1em;color:var(--gold-dk)}
+    .loc .l p{font-size:13.5px;color:var(--ink-soft);margin-top:6px}
 
-    .cta{background:linear-gradient(160deg,#9fb487,#7f9568);color:#fff;text-align:center;border-radius:60px 60px 0 0}
-    .cta .label{color:#f0e7d8}.cta .h2{margin-bottom:16px}
-    .cta p{opacity:.92;margin-bottom:32px}
-    .cta .btn{background:#fff;color:var(--sage-dk)}
+    .cta{background:var(--ink);color:#ece4d4;text-align:center}
+    .cta .idx{color:var(--gold-lt)}.cta .h2{color:#fff;margin-bottom:18px}
+    .cta p{opacity:.85;margin-bottom:8px}.cta .ways{color:var(--gold-lt);margin-bottom:30px;font-size:14px}
+    .cta .btn{background:var(--gold)}
 
-    footer{background:var(--bark);color:#cdd3c3;text-align:center;padding:54px 0;font-size:13px}
-    footer .brand{color:#fff;margin-bottom:12px}
-    .sample{position:fixed;left:12px;bottom:12px;z-index:60;background:rgba(63,71,56,.85);color:#fff;font-size:11px;padding:6px 12px;border-radius:20px}
+    footer{background:#2c2820;color:#c9bfac;text-align:center;padding:50px 0;font-size:13px}
+    footer .fn{color:#fff;letter-spacing:.16em;margin-bottom:4px}
+    footer .fs{font-size:10px;letter-spacing:.4em;color:var(--gold-lt);margin-bottom:16px}
+    .sample{position:fixed;left:12px;bottom:12px;z-index:60;background:rgba(58,52,43,.85);color:#fff;font-size:11px;padding:6px 12px;border-radius:20px}
   </style>
 </head>
 <body>
   <header><div class="wrap nav">
-    <div class="brand">mana lilia</div>
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 48 46" fill="none" stroke="#8a6c2f" stroke-width="1.6"><path d="M24 42C9 31 3 22 3 14 3 8 7.5 4 13 4c4.6 0 8.4 2.8 11 7 2.6-4.2 6.4-7 11-7 5.5 0 10 4 10 10 0 8-6 17-21 28Z"/><path d="M24 31c0-6 0-10 0-15M24 16c-2.5-2-5-2.5-7-2 1 3 3.5 4.5 7 5Zm0 0c2.5-2 5-2.5 7-2-1 3-3.5 4.5-7 5Z" stroke-linecap="round"/></svg>
+      <span class="nm serif">ManaLilia</span>
+    </a>
     <nav class="nav-links">
-      <a href="#about">バレトンとは</a><a href="#lessons">レッスン</a>
-      <a href="#flow">はじめ方</a><a href="#price">料金</a><a href="#contact">ご予約</a>
+      <a href="#about">About</a><a href="#group">Group</a><a href="#session">Session</a><a href="#access">Location</a><a href="#contact">Contact</a>
     </nav>
     <a class="ig" href="https://www.instagram.com/manalilia2222/" target="_blank" rel="noopener">Instagram</a>
   </div></header>
 
-  <section class="hero">
-    <span class="blob b1"></span><span class="blob b2"></span>
-    <div class="wrap hero-inner">
-      <span class="pill">心と体を、ととのえる</span>
-      <h1>自分にやさしい時間で、<br><em>しなやかな私</em>へ。</h1>
-      <p>mana lilia のバレトンは、がんばりすぎない。呼吸と音楽に合わせて、心地よく体をほぐすウェルネス習慣です。</p>
-      <a class="btn" href="#contact">体験レッスンに申し込む</a>
-    </div>
-  </section>
-
-  <section id="about"><div class="wrap about">
-    <div class="ph">PHOTO</div>
+  <section class="hero" id="top"><div class="wrap"><div class="hero-grid">
     <div>
-      <span class="label">About</span>
-      <h2 class="h2">バレトンって、<br>どんなもの？</h2>
-      <p>バレエ・フィットネス・ヨガのいいところを集めたエクササイズ。器具を使わず、自分のペースで全身をやさしく動かします。</p>
-      <p>体力に自信がなくても大丈夫。続けるうちに姿勢がととのい、心まで軽くなる。そんな時間をお届けします。</p>
+      <p class="kick">MOVEMENT × LIFE</p>
+      <h1 class="serif">からだも、こころも、<br>くらしも。<br>しなやかに、ととのえる。</h1>
+      <p>バレトンを軸に、心と体、そして暮らし（お金）まで整える。ManaLilia Movement Studio へようこそ。</p>
+      <a class="btn" href="#contact">ご予約・お問い合わせ</a>
+    </div>
+    <div class="hero-art">
+      <span class="frame"></span>
+      <svg width="84" height="80" viewBox="0 0 48 46" fill="none" stroke="#a9853f" stroke-width="1.3"><path d="M24 42C9 31 3 22 3 14 3 8 7.5 4 13 4c4.6 0 8.4 2.8 11 7 2.6-4.2 6.4-7 11-7 5.5 0 10 4 10 10 0 8-6 17-21 28Z"/><path d="M24 31c0-6 0-10 0-15M24 16c-2.5-2-5-2.5-7-2 1 3 3.5 4.5 7 5Zm0 0c2.5-2 5-2.5 7-2-1 3-3.5 4.5-7 5Zm0-1c0-2.2 1-4.2 3-5.4m-3 5.4c0-2.2-1-4.2-3-5.4" stroke-linecap="round"/></svg>
+      <span class="vt serif">ManaLilia Movement Studio</span>
+    </div>
+  </div></div></section>
+
+  <section id="about"><div class="wrap">
+    <div class="sec-head"><p class="idx">01</p><h2 class="h2 serif">スタジオについて</h2><span class="en">About</span></div>
+    <div class="about-grid">
+      <p>ManaLilia Movement Studio は、バレトンをはじめとするムーブメントで「からだ」を、お金の学びや家計・税務の相談で「くらし」を整えるスタジオです。講師のManaは、バレトンインストラクターであり税理士。あなたの毎日にやさしく寄り添います。</p>
+      <div class="three">
+        <div class="it"><b class="serif">からだ</b><span>バレトン・ストレッチ・体幹ケアでしなやかに。</span></div>
+        <div class="it"><b class="serif">こころ</b><span>音楽に合わせて動く、心地よい時間。</span></div>
+        <div class="it"><b class="serif">くらし</b><span>お金の勉強会・家計・税務相談で土台づくり。</span></div>
+      </div>
     </div>
   </div></section>
 
-  <section id="lessons" class="lessons"><div class="wrap">
-    <span class="label">Lessons</span>
-    <h2 class="h2">レッスンメニュー</h2>
-    <div class="cards">
-      <div class="card"><div class="t">60min</div><h3>バレトン ベーシック</h3><p>全身をバランスよく動かす基本クラス。初めての方におすすめ。</p></div>
-      <div class="card"><div class="t">45min</div><h3>ゆるストレッチ</h3><p>呼吸を深めながら、こり固まった体をやさしくほぐします。</p></div>
-      <div class="card"><div class="t">60min</div><h3>少人数クラス</h3><p>4名までのアットホームな空間で、ていねいに。</p></div>
-      <div class="card"><div class="t">45min</div><h3>オンライン</h3><p>おうちから気軽に参加。画面オフでもOK。</p></div>
+  <section id="group" class="lessons"><div class="wrap">
+    <div class="sec-head"><p class="idx">02</p><h2 class="h2 serif">グループレッスン</h2><span class="en">仙川 / 沼津</span></div>
+    <div class="ltable">
+      <div class="lrow"><div class="t">やさしいバレトンクラス <small>初心者向け</small></div><p>音楽に合わせて、楽しく全身を動かすクラス。</p></div>
+      <div class="lrow"><div class="t">バレトンクラス</div><p>しっかり汗をかく有酸素運動＋バレエ要素の全身運動。</p></div>
+      <div class="lrow"><div class="t">身体を整えるクラス</div><p>姿勢・呼吸・体幹を見直す、整えるストレッチ＋トレーニング。</p></div>
+      <div class="lrow"><div class="t">フォームローラークラス <small>月1回</small></div><p>全身のコリや張りをじっくりほぐすセルフケア。</p></div>
+      <div class="feebar"><span><b>1レッスン</b> 1,500円</span><span><b>受け放題</b> 5,500円 / 月</span><span><b>おかねの勉強会</b> 2,500円 / 回（月1回・1時間半）</span></div>
     </div>
   </div></section>
 
-  <section id="flow"><div class="wrap">
-    <span class="label">How to start</span>
-    <h2 class="h2">はじめ方は、3ステップ。</h2>
-    <div class="steps">
-      <div class="step"><div class="num">1</div><h3>DMで予約</h3><p>InstagramのDMから希望日をお送りください。</p></div>
-      <div class="step"><div class="num">2</div><h3>体験レッスン</h3><p>動きやすい服装でお越しください。手ぶらでOK。</p></div>
-      <div class="step"><div class="num">3</div><h3>続けてみる</h3><p>気に入ったら、お好きなプランで継続できます。</p></div>
+  <section id="session"><div class="wrap">
+    <div class="sec-head"><p class="idx">03</p><h2 class="h2 serif">個別セッション</h2><span class="en">対面 / オンライン</span></div>
+    <div class="ses-grid">
+      <div class="ses"><h3 class="serif">プライベートレッスン（身体）</h3><p>体調や目的に応じてオーダーメイド。バレトン・軽めの運動・ストレッチ・体幹・筋膜ケアなど。</p></div>
+      <div class="ses"><h3 class="serif">お金と家計の個別相談</h3><p>教育費・保険・家計管理などを「やさしく、わかりやすく」丁寧にサポート。</p></div>
+      <div class="ses"><h3 class="serif">税務相談</h3><p>個人事業主・副業・確定申告など。税理士として暮らしに寄り添うアドバイス。</p></div>
     </div>
+    <p class="ses-note"><b>すべて 60分 6,000円</b>　／　ご予約は Instagram のDM または LINE にて「セッション希望」とお送りください。</p>
   </div></section>
 
-  <section id="price" class="lessons"><div class="wrap">
-    <span class="label">Price</span>
-    <h2 class="h2">料金</h2>
-    <div class="price-grid">
-      <div class="price"><div class="n">体験レッスン</div><div class="v">¥1,000</div></div>
-      <div class="price"><div class="n">月4回プラン</div><div class="v">¥6,400<small>/月</small></div></div>
-      <div class="price"><div class="n">都度払い</div><div class="v">¥2,000<small>/回</small></div></div>
+  <section id="access" class="lessons"><div class="wrap">
+    <div class="sec-head"><p class="idx">04</p><h2 class="h2 serif">開催エリア</h2><span class="en">Location</span></div>
+    <div class="loc">
+      <div class="l"><b class="serif">仙川クラス</b><p>東京・仙川エリアにて開催。日程の詳細はお問い合わせください。</p></div>
+      <div class="l"><b class="serif">沼津クラス</b><p>静岡・沼津エリアにて開催。日程の詳細はお問い合わせください。</p></div>
     </div>
   </div></section>
 
   <section id="contact" class="cta"><div class="wrap">
-    <span class="label">Contact</span>
-    <h2 class="h2">まずは、深呼吸から。</h2>
-    <p>ご予約・ご質問は Instagram のDMでお気軽に。</p>
+    <p class="idx">05</p>
+    <h2 class="h2 serif">まずは、お気軽に。</h2>
+    <p>体験・ご予約・ご相談など、どうぞお気軽に。</p>
+    <p class="ways">ご予約は Instagram のDM または LINE から</p>
     <a class="btn" href="https://www.instagram.com/manalilia2222/" target="_blank" rel="noopener">＠manalilia2222 へDM</a>
   </div></section>
 
   <footer>
-    <div class="brand">mana lilia</div>
-    <p>&copy; 2026 mana lilia barreton studio</p>
+    <div class="fn serif">ManaLilia</div>
+    <div class="fs">MOVEMENT STUDIO</div>
+    <p>&copy; 2026 ManaLilia Movement Studio</p>
   </footer>
-  <span class="sample">案B・サンプル内容</span>
+  <span class="sample">案B・ロゴ調／一部仮の日程</span>
 </body>
 </html>
