@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>mana lilia｜バレトン教室（案A・エレガント）</title>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --ink:#2b2724; --ink-soft:#6a625c; --ivory:#faf7f2; --cream:#f1ebe1;
+      --rose:#b5817d; --rose-dk:#9c6b67; --line:#e3dad0;
+    }
+    body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Meiryo",sans-serif;color:var(--ink);background:var(--ivory);line-height:1.9;font-size:16px;-webkit-font-smoothing:antialiased}
+    .serif{font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+    img{display:block;max-width:100%}
+
+    header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(250,247,242,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-size:20px;letter-spacing:.18em}
+    .brand small{display:block;font-size:9px;letter-spacing:.4em;color:var(--rose);margin-top:2px}
+    .nav-links{display:flex;gap:30px;font-size:13px;letter-spacing:.08em}
+    .nav-links a:hover{color:var(--rose)}
+    .ig{border:1px solid var(--rose);color:var(--rose);padding:7px 16px;border-radius:30px;font-size:12px;letter-spacing:.1em}
+    .ig:hover{background:var(--rose);color:#fff}
+    @media(max-width:760px){.nav-links{display:none}}
+
+    .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;
+      background:linear-gradient(120deg,#f4ede3 0%,#efe3da 55%,#e7d3cf 100%)}
+    .hero::after{content:"";position:absolute;right:-120px;bottom:-120px;width:480px;height:480px;border-radius:50%;
+      background:radial-gradient(circle,rgba(181,129,125,.22),transparent 70%)}
+    .hero-inner{position:relative;z-index:1;padding-top:72px}
+    .hero .sub{font-size:12px;letter-spacing:.42em;color:var(--rose-dk);margin-bottom:26px}
+    .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:500;line-height:1.5;letter-spacing:.06em;margin-bottom:28px}
+    .hero p{max-width:460px;color:var(--ink-soft);margin-bottom:40px}
+    .btn{display:inline-block;background:var(--rose);color:#fff;padding:15px 40px;border-radius:40px;font-size:14px;letter-spacing:.12em;transition:.25s}
+    .btn:hover{background:var(--rose-dk);transform:translateY(-2px)}
+
+    section{padding:110px 0}
+    .label{font-size:11px;letter-spacing:.36em;color:var(--rose);text-transform:uppercase;margin-bottom:14px}
+    .h2{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:500;letter-spacing:.06em;margin-bottom:44px;line-height:1.5}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .about .ph{aspect-ratio:4/5;border-radius:4px;background:
+      linear-gradient(135deg,#d9c2bd,#c2a39e);display:flex;align-items:flex-end;justify-content:center;color:rgba(255,255,255,.85);font-size:12px;letter-spacing:.3em;padding:18px}
+    .about p{color:var(--ink-soft);margin-bottom:18px}
+    @media(max-width:760px){.about{grid-template-columns:1fr;gap:32px}}
+
+    .lessons{background:var(--cream)}
+    .menu{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+    .menu .item{padding:26px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:20px}
+    .menu .item h3{font-weight:500;font-size:19px;letter-spacing:.04em}
+    .menu .item .t{font-size:12px;color:var(--ink-soft);letter-spacing:.1em;white-space:nowrap}
+    .menu .item p{flex-basis:100%;font-size:13px;color:var(--ink-soft);margin-top:6px}
+    @media(max-width:680px){.menu{grid-template-columns:1fr;gap:0}}
+
+    .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
+    .price{border:1px solid var(--line);border-radius:6px;padding:40px 24px;background:#fff}
+    .price .n{font-size:13px;letter-spacing:.12em;color:var(--rose-dk);margin-bottom:14px}
+    .price .v{font-size:30px;font-weight:500}
+    .price .v small{font-size:13px;color:var(--ink-soft)}
+    .price .d{font-size:12px;color:var(--ink-soft);margin-top:10px}
+    @media(max-width:680px){.price-grid{grid-template-columns:1fr}}
+
+    .teacher{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:center}
+    .teacher .ph{aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,#cdb3ae,#b5817d);display:flex;align-items:center;justify-content:center;color:#fff;font-size:26px;letter-spacing:.1em}
+    @media(max-width:680px){.teacher{grid-template-columns:1fr;justify-items:center;text-align:center;gap:28px}.teacher .ph{width:200px}}
+
+    .cta{background:linear-gradient(120deg,#e7d3cf,#d9bdb8);text-align:center}
+    .cta .h2{margin-bottom:18px}
+    .cta p{color:var(--ink-soft);margin-bottom:34px}
+
+    footer{background:var(--ink);color:#cfc7c0;text-align:center;padding:56px 0;font-size:13px;letter-spacing:.08em}
+    footer .brand{color:#fff;margin-bottom:14px}
+    .sample{position:fixed;left:12px;bottom:12px;z-index:60;background:rgba(43,39,36,.85);color:#fff;font-size:11px;padding:6px 12px;border-radius:20px;letter-spacing:.08em}
+  </style>
+</head>
+<body>
+  <header><div class="wrap nav">
+    <div class="brand serif">mana lilia<small>BARRETON</small></div>
+    <nav class="nav-links">
+      <a href="#about">バレトンとは</a>
+      <a href="#lessons">レッスン</a>
+      <a href="#price">料金</a>
+      <a href="#teacher">講師</a>
+      <a href="#contact">ご予約</a>
+    </nav>
+    <a class="ig" href="https://www.instagram.com/manalilia2222/" target="_blank" rel="noopener">Instagram</a>
+  </div></header>
+
+  <section class="hero"><div class="wrap hero-inner">
+    <p class="sub">BALLET · TONING · STRETCH</p>
+    <h1 class="serif">バレエの優雅さと、<br>しなやかな強さを。</h1>
+    <p>mana lilia は、バレエの動きを取り入れたバレトンで、美しい姿勢としなやかな身体づくりをお手伝いするスタジオです。</p>
+    <a class="btn" href="#contact">体験レッスンのご予約</a>
+  </div></section>
+
+  <section id="about"><div class="wrap about">
+    <div class="ph">PHOTO</div>
+    <div>
+      <p class="label">About Barreton</p>
+      <h2 class="h2 serif">バレトンという、<br>心地よい習慣。</h2>
+      <p>バレトンは、バレエ・フィットネス・ヨガの動きを組み合わせたエクササイズ。器具を使わず、自分の体重で全身をバランスよく整えます。</p>
+      <p>運動が苦手な方や初めての方でも、音楽に合わせて心地よく続けられます。しなやかで疲れにくい身体を、一緒に育てていきましょう。</p>
+    </div>
+  </div></section>
+
+  <section id="lessons" class="lessons"><div class="wrap">
+    <p class="label">Lessons</p>
+    <h2 class="h2 serif">レッスンメニュー</h2>
+    <div class="menu">
+      <div class="item"><h3>バレトン ベーシック</h3><span class="t">60min</span><p>基本の動きで全身を整える、いちばん人気のクラス。</p></div>
+      <div class="item"><h3>バレトン ストレッチ</h3><span class="t">45min</span><p>柔軟性アップと姿勢改善にフォーカスしたクラス。</p></div>
+      <div class="item"><h3>少人数クラス</h3><span class="t">60min</span><p>4名までの少人数で、丁寧にレッスン。</p></div>
+      <div class="item"><h3>オンライン</h3><span class="t">45min</span><p>ご自宅から参加できるライブレッスン。</p></div>
+    </div>
+  </div></section>
+
+  <section id="price"><div class="wrap">
+    <p class="label">Price</p>
+    <h2 class="h2 serif">料金</h2>
+    <div class="price-grid">
+      <div class="price"><div class="n">体験レッスン</div><div class="v">¥1,000</div><div class="d">初回の方限定</div></div>
+      <div class="price"><div class="n">月4回プラン</div><div class="v">¥6,400<small>/月</small></div><div class="d">週1回のペースで</div></div>
+      <div class="price"><div class="n">都度払い</div><div class="v">¥2,000<small>/回</small></div><div class="d">お好きなときに</div></div>
+    </div>
+  </div></section>
+
+  <section id="teacher" class="lessons"><div class="wrap teacher">
+    <div class="ph serif">Mana</div>
+    <div>
+      <p class="label">Instructor</p>
+      <h2 class="h2 serif" style="margin-bottom:18px">Mana</h2>
+      <p style="color:var(--ink-soft)">バレトンインストラクター。「身体を動かす心地よさを、一人でも多くの方に。」をモットーに、初心者の方も安心して通えるレッスンを大切にしています。</p>
+    </div>
+  </div></section>
+
+  <section id="contact" class="cta"><div class="wrap">
+    <p class="label" style="color:var(--ink)">Contact</p>
+    <h2 class="h2 serif">まずは体験から。</h2>
+    <p>ご予約・お問い合わせは Instagram のDMよりお気軽にどうぞ。</p>
+    <a class="btn" href="https://www.instagram.com/manalilia2222/" target="_blank" rel="noopener">＠manalilia2222 へDM</a>
+  </div></section>
+
+  <footer>
+    <div class="brand serif">mana lilia</div>
+    <p>&copy; 2026 mana lilia barreton studio</p>
+  </footer>
+  <span class="sample">案A・サンプル内容</span>
+</body>
+</html>

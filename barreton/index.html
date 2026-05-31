@@ -3,53 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>バレトン教室（準備中）| chocochobi.site</title>
-  <meta name="description" content="バレトン教室のサイトは現在準備中です。">
+  <meta name="robots" content="noindex">
+  <title>mana lilia バレトン教室｜デザイン案</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
-      color: #4a3b44;
-      background: linear-gradient(160deg, #fbf4f6 0%, #f5e9df 100%);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
-      text-align: center;
-      line-height: 1.8;
-    }
-    .soon { max-width: 520px; }
-    .soon-mark {
-      font-size: 12px;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: #c98aa6;
-      font-weight: 700;
-    }
-    .soon h1 {
-      font-size: clamp(1.8rem, 5vw, 2.4rem);
-      margin: 16px 0;
-      letter-spacing: 0.04em;
-    }
-    .soon p { color: #8a7680; font-size: 15px; }
-    .soon a {
-      display: inline-block;
-      margin-top: 32px;
-      color: #c98aa6;
-      font-weight: 700;
-      font-size: 14px;
-      text-decoration: none;
-    }
-    .soon a:hover { color: #b5708f; }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Meiryo",sans-serif;color:#2d2a33;background:#f3f1ec;line-height:1.8;padding:56px 20px}
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:920px;margin:0 auto}
+    .head{text-align:center;margin-bottom:48px}
+    .head .mark{font-size:12px;letter-spacing:.3em;color:#b07d8a;font-weight:700;text-transform:uppercase}
+    .head h1{font-size:clamp(1.6rem,4vw,2.2rem);margin:12px 0 10px;letter-spacing:.04em}
+    .head p{color:#6f6b75;font-size:14.5px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{display:flex;flex-direction:column;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.07);transition:transform .25s,box-shadow .25s}
+    .card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.12)}
+    .swatch{height:120px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;letter-spacing:.2em}
+    .sw-a{background:linear-gradient(120deg,#e7d3cf,#b5817d)}
+    .sw-b{background:linear-gradient(120deg,#9fb487,#c97b5a)}
+    .sw-c{background:linear-gradient(120deg,#14142b,#ff5a7a)}
+    .body{padding:24px 22px;display:flex;flex-direction:column;flex:1}
+    .tag{font-size:11px;letter-spacing:.1em;color:#b07d8a;font-weight:700;margin-bottom:8px}
+    .card h2{font-size:18px;margin-bottom:8px}
+    .card .desc{font-size:13px;color:#6f6b75;flex:1}
+    .go{margin-top:18px;font-size:13px;font-weight:700;color:#b07d8a}
+    .note{margin-top:40px;text-align:center;font-size:12.5px;color:#8a8690;background:#eae6df;border-radius:12px;padding:16px 18px}
+    .foot{text-align:center;margin-top:30px;font-size:12px;color:#a7a3ad}
+    @media(max-width:720px){.grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-  <main class="soon">
-    <span class="soon-mark">Coming Soon</span>
-    <h1>バレトン教室</h1>
-    <p>ただいまサイトを準備中です。<br>公開までもうしばらくお待ちください。</p>
-    <a href="../">← サイト一覧へ戻る</a>
-  </main>
+  <div class="wrap">
+    <div class="head">
+      <span class="mark">Design Proposals</span>
+      <h1>mana lilia バレトン教室｜デザイン案</h1>
+      <p>雰囲気の異なる3つのデザイン案をご用意しました。下のカードからご覧いただけます。</p>
+    </div>
+
+    <div class="grid">
+      <a class="card" href="a/">
+        <div class="swatch sw-a">A</div>
+        <div class="body">
+          <div class="tag">案A</div>
+          <h2>エレガント</h2>
+          <p class="desc">バレエ由来の上品でクラシックな雰囲気。明朝体とくすみピンクで大人っぽく。</p>
+          <span class="go">この案を見る →</span>
+        </div>
+      </a>
+      <a class="card" href="b/">
+        <div class="swatch sw-b">B</div>
+        <div class="body">
+          <div class="tag">案B</div>
+          <h2>ナチュラル</h2>
+          <p class="desc">ヨガ・ウェルネス系の癒し。セージグリーン×テラコッタで自然体に。</p>
+          <span class="go">この案を見る →</span>
+        </div>
+      </a>
+      <a class="card" href="c/">
+        <div class="swatch sw-c">C</div>
+        <div class="body">
+          <div class="tag">案C</div>
+          <h2>モダン・アクティブ</h2>
+          <p class="desc">元気でポップな印象。ネイビー×コーラルで若々しく、フィットネスらしく。</p>
+          <span class="go">この案を見る →</span>
+        </div>
+      </a>
+    </div>
+
+    <p class="note">※ 掲載中の文章・料金・スケジュールは<strong>すべてサンプル（仮の内容）</strong>です。デザインの雰囲気を比較するためのものです。決定後、実際の情報に差し替えます。</p>
+    <p class="foot">mana lilia barreton studio</p>
+  </div>
 </body>
 </html>
