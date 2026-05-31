@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>コラム | 山田法律事務所</title>
+  <meta name="description" content="山田法律事務所が、相続・離婚・債務整理など、暮らしと法律に関する役立つ情報を分かりやすくお届けします。">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <header>
+    <nav class="navbar">
+      <a class="nav-logo" href="../index.html">
+        <span class="logo-mark">山田</span>
+        <span class="logo-text">法律事務所</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">事務所について</a></li>
+        <li><a href="../index.html#practice">取扱分野</a></li>
+        <li><a href="../index.html#attorneys">弁護士紹介</a></li>
+        <li><a href="index.html">コラム</a></li>
+        <li><a href="../index.html#contact" class="btn-contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ページヘッダー -->
+  <section class="subpage-header">
+    <div class="container">
+      <div class="section-label light">Column</div>
+      <h1 class="subpage-title">コラム</h1>
+      <p class="subpage-desc">相続・離婚・債務整理など、暮らしと法律に関する役立つ情報を<br>分かりやすくお届けします。</p>
+    </div>
+  </section>
+
+  <!-- コラム一覧 -->
+  <section class="section column-list-section">
+    <div class="container">
+      <div class="column-list">
+
+        <!-- 記事はここに追加していきます -->
+        <a class="column-card" href="souzoku-no-kiso.html">
+          <div class="column-card-meta">
+            <span class="column-cat">相続</span>
+            <span class="column-date">2026.05.31</span>
+          </div>
+          <h2 class="column-card-title">相続が発生したら、まず確認したい3つのこと</h2>
+          <p class="column-card-excerpt">大切なご家族を亡くされた後、何から手をつければよいか分からず不安になる方は少なくありません。相続手続きでつまずかないために、最初に確認しておきたいポイントを整理しました。</p>
+          <span class="column-readmore">続きを読む →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-mark">山田</span>
+          <span class="logo-text">法律事務所</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="../index.html#about">事務所について</a>
+          <a href="../index.html#practice">取扱分野</a>
+          <a href="../index.html#attorneys">弁護士紹介</a>
+          <a href="index.html">コラム</a>
+          <a href="../index.html#contact">お問い合わせ</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 山田法律事務所. All rights reserved.</p>
+        <p class="footer-note">弁護士法人 東京弁護士会所属</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ナビバーのスクロール影
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 10);
+    });
+  </script>
+
+</body>
+</html>
