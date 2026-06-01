@@ -280,7 +280,7 @@ header {
 
 .about-stats {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
@@ -728,7 +728,7 @@ header {
 
   .hero h1 { font-size: 1.8rem; }
 
-  .about-stats { grid-template-columns: repeat(3, 1fr); }
+  .about-stats { grid-template-columns: repeat(2, 1fr); }
 
   .practice-grid { grid-template-columns: 1fr; }
 
