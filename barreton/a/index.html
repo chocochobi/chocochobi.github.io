@@ -45,7 +45,7 @@
     /* Hero：文字と余白主役＋大きな1枚 */
     .hero{min-height:100vh;display:flex;align-items:center;background:var(--paper)}
     .hero-grid{display:grid;grid-template-columns:1fr .72fr;gap:72px;align-items:center;width:100%;padding-top:76px}
-    .hero-logo{width:188px;max-width:62%;margin-bottom:30px;mix-blend-mode:multiply}
+    .hero-logo{width:184px;height:auto;max-width:62%;margin-bottom:30px;mix-blend-mode:multiply}
     .hero h1{font-size:clamp(2.1rem,4.4vw,3.1rem);letter-spacing:.08em;line-height:1.7;font-weight:500;margin-bottom:30px}
     .hero p{color:var(--soft);max-width:420px;margin-bottom:44px}
     .hero-photo{aspect-ratio:806/1132;width:100%;overflow:hidden}
@@ -62,8 +62,8 @@
     @media(max-width:760px){.three{grid-template-columns:1fr;gap:32px}}
 
     /* Instructor */
-    .inst-grid{display:grid;grid-template-columns:.85fr 1fr;gap:64px;align-items:center}
-    .inst-photo{aspect-ratio:1;width:100%;overflow:hidden}
+    .inst-grid{display:grid;grid-template-columns:220px 1fr;gap:56px;align-items:center}
+    .inst-photo{width:220px;height:220px;overflow:hidden;flex-shrink:0}
     .inst-photo img{width:100%;height:100%;object-fit:cover}
     .inst h3{font-size:26px;letter-spacing:.1em;margin-bottom:6px;font-weight:500}
     .inst .role{font-size:12px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:20px}
