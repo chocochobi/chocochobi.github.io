@@ -828,6 +828,39 @@ header {
   letter-spacing: 0.03em;
 }
 
+/* コラム準備中 */
+.column-empty {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 64px 32px;
+  text-align: center;
+}
+
+.column-empty-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+
+.column-empty-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+  margin: 14px auto 0;
+}
+
+.column-empty-text {
+  color: var(--gray-md);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
 /* 記事本文 */
 .article-meta-top {
   display: flex;
