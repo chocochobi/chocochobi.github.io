@@ -4,73 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
-  <title>mana lilia バレトン教室｜デザイン案</title>
+  <title>ManaLilia Movement Studio｜フォント案をお選びください</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Shippori+Mincho+B1:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&family=Zen+Old+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Meiryo",sans-serif;color:#2d2a33;background:#f3f1ec;line-height:1.8;padding:56px 20px}
+    :root{--ink:#4a4138;--soft:#8a7f6e;--cream:#f8f2e7;--card:#fffdf8;--gold:#b6904c;--gold-dk:#947338;--brown:#5a4332;--line:#ece2d0}
+    body{font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;color:var(--ink);background:var(--cream);line-height:1.9;padding:56px 20px}
     a{text-decoration:none;color:inherit}
-    .wrap{max-width:920px;margin:0 auto}
-    .head{text-align:center;margin-bottom:48px}
-    .head .mark{font-size:12px;letter-spacing:.3em;color:#b07d8a;font-weight:700;text-transform:uppercase}
-    .head h1{font-size:clamp(1.6rem,4vw,2.2rem);margin:12px 0 10px;letter-spacing:.04em}
-    .head p{color:#6f6b75;font-size:14.5px}
+    .wrap{max-width:960px;margin:0 auto}
+    .head{text-align:center;margin-bottom:46px}
+    .head .mark{font-family:"Cormorant Garamond",serif;font-size:14px;letter-spacing:.3em;color:var(--gold);font-weight:600;text-transform:uppercase}
+    .head h1{font-family:"Shippori Mincho B1",serif;font-size:clamp(1.5rem,4vw,2.1rem);margin:10px 0 12px;letter-spacing:.06em;color:var(--brown);font-weight:500}
+    .head p{color:var(--soft);font-size:14.5px;max-width:560px;margin:0 auto}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .card{display:flex;flex-direction:column;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.07);transition:transform .25s,box-shadow .25s}
-    .card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.12)}
-    .swatch{height:120px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;letter-spacing:.2em}
-    .sw-a{background:linear-gradient(120deg,#ffffff,#f4efe4 55%,#b08d4f)}
-    .sw-b{background:linear-gradient(120deg,#f6e6dc,#ecd6c9 45%,#b6904c)}
-    .sw-c{background:linear-gradient(120deg,#241f1a,#c9a564)}
-    .body{padding:24px 22px;display:flex;flex-direction:column;flex:1}
-    .tag{font-size:11px;letter-spacing:.1em;color:#b07d8a;font-weight:700;margin-bottom:8px}
-    .card h2{font-size:18px;margin-bottom:8px}
-    .card .desc{font-size:13px;color:#6f6b75;flex:1}
-    .go{margin-top:18px;font-size:13px;font-weight:700;color:#b07d8a}
-    .note{margin-top:40px;text-align:center;font-size:12.5px;color:#8a8690;background:#eae6df;border-radius:12px;padding:16px 18px}
-    .foot{text-align:center;margin-top:30px;font-size:12px;color:#a7a3ad}
+    .card{display:flex;flex-direction:column;background:var(--card);border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(120,95,55,.1);transition:transform .25s,box-shadow .25s}
+    .card:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(120,95,55,.18)}
+    .preview{padding:30px 22px 26px;text-align:center;background:linear-gradient(160deg,#fdf8ee,#f0e7d6);border-bottom:1px solid var(--line)}
+    .pv-en{font-size:11px;letter-spacing:.28em;color:var(--gold);text-transform:uppercase;margin-bottom:12px}
+    .pv-jp{font-size:1.35rem;letter-spacing:.06em;color:var(--brown);line-height:1.5;font-weight:500}
+    .pv-brand{margin-top:14px;font-size:16px;letter-spacing:.12em;color:var(--gold-dk)}
+    .body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+    .tag{font-family:"Cormorant Garamond",serif;font-size:13px;letter-spacing:.1em;color:var(--gold);font-weight:600;margin-bottom:6px}
+    .card h2{font-size:17px;margin-bottom:8px;color:var(--brown);font-weight:500}
+    .card .desc{font-size:13px;color:var(--soft);flex:1}
+    .specs{margin-top:14px;font-size:11.5px;color:var(--gold-dk);line-height:1.7;border-top:1px dashed var(--line);padding-top:12px}
+    .go{margin-top:16px;font-size:13px;font-weight:700;color:var(--gold-dk)}
+
+    /* 案①：やわらか温かみ（見出しZen Old Mincho／本文・欧文 Zen Maru Gothic） */
+    .opt1 .pv-jp,.opt1 h2{font-family:"Zen Old Mincho",serif}
+    .opt1 .pv-en,.opt1 .pv-brand,.opt1 .tag{font-family:"Zen Maru Gothic",sans-serif;font-weight:500}
+    .opt1 .desc,.opt1 .specs{font-family:"Zen Maru Gothic",sans-serif}
+    /* 案②：凛とした上品さ（見出しShippori Mincho B1／本文・欧文 Zen Kaku Gothic New） */
+    .opt2 .pv-jp,.opt2 h2{font-family:"Shippori Mincho B1",serif}
+    .opt2 .pv-en,.opt2 .pv-brand,.opt2 .tag{font-family:"Zen Kaku Gothic New",sans-serif}
+    .opt2 .desc,.opt2 .specs{font-family:"Zen Kaku Gothic New",sans-serif}
+    /* 案③：欧文エレガント（見出しShippori／本文 Zen Kaku／欧文 Cormorant Garamond） */
+    .opt3 .pv-jp,.opt3 h2{font-family:"Shippori Mincho B1",serif}
+    .opt3 .pv-en,.opt3 .pv-brand,.opt3 .tag{font-family:"Cormorant Garamond",serif;font-weight:600}
+    .opt3 .desc,.opt3 .specs{font-family:"Zen Kaku Gothic New",sans-serif}
+
+    .note{margin-top:38px;text-align:center;font-size:12.5px;color:var(--soft);background:#f0e7d6;border-radius:14px;padding:16px 20px;line-height:1.9}
+    .foot{font-family:"Cormorant Garamond",serif;text-align:center;margin-top:28px;font-size:13px;letter-spacing:.2em;color:var(--gold)}
     @media(max-width:720px){.grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="head">
-      <span class="mark">Design Proposals</span>
-      <h1>mana lilia バレトン教室｜デザイン案</h1>
-      <p>雰囲気の異なる3つのデザイン案をご用意しました。下のカードからご覧いただけます。</p>
+      <span class="mark">ManaLilia Movement Studio</span>
+      <h1>フォント案をお選びください</h1>
+      <p>デザインは「やわらか／ルックブック調（B案）」で確定しています。文字（フォント）の雰囲気だけ、3案ご用意しました。各カードはそのフォントで表示しています。</p>
     </div>
 
     <div class="grid">
-      <a class="card" href="a/">
-        <div class="swatch sw-a">A</div>
+      <a class="card opt1" href="b-font1/">
+        <div class="preview">
+          <div class="pv-en">Expression · Movement</div>
+          <div class="pv-jp">踊るように、<br>ととのえる。</div>
+          <div class="pv-brand">ManaLilia</div>
+        </div>
         <div class="body">
-          <div class="tag">案A（ロゴ調・本番内容）</div>
-          <h2>ミニマル／余白の上質</h2>
-          <p class="desc">白基調×ゴールド、たっぷりの余白とタイポグラフィ主役。写真を1枚ずつ大きく、静かに上質に見せる「引き算」のデザイン。</p>
+          <div class="tag">Font A</div>
+          <h2>やわらか温かみ</h2>
+          <p class="desc">丸みのある文字で、いちばん親しみやすく優しい印象。あたたかい雰囲気を大切にしたい方に。</p>
+          <div class="specs">見出し：Zen Old Mincho（やわらか明朝）<br>本文：Zen Maru Gothic（丸ゴシック）</div>
           <span class="go">この案を見る →</span>
         </div>
       </a>
-      <a class="card" href="b/">
-        <div class="swatch sw-b">B</div>
+
+      <a class="card opt2" href="b-font2/">
+        <div class="preview">
+          <div class="pv-en">Expression · Movement</div>
+          <div class="pv-jp">踊るように、<br>ととのえる。</div>
+          <div class="pv-brand">ManaLilia</div>
+        </div>
         <div class="body">
-          <div class="tag">案B（ロゴ調・本番内容）</div>
-          <h2>やわらか／ルックブック</h2>
-          <p class="desc">クリームベージュ×ゴールドの温かみ。大きめの角丸・ピル型ボタン・丸枠の写真で、やさしく親しみやすい印象。</p>
+          <div class="tag">Font B</div>
+          <h2>凛とした上品さ</h2>
+          <p class="desc">細めの明朝で、シュッと締まった大人っぽい上品さ。落ち着いた印象にしたい方に。</p>
+          <div class="specs">見出し：Shippori Mincho B1（凛とした明朝）<br>本文：Zen Kaku Gothic New（端正ゴシック）</div>
           <span class="go">この案を見る →</span>
         </div>
       </a>
-      <a class="card" href="c/">
-        <div class="swatch sw-c">C</div>
+
+      <a class="card opt3" href="b/">
+        <div class="preview">
+          <div class="pv-en">Expression · Movement</div>
+          <div class="pv-jp">踊るように、<br>ととのえる。</div>
+          <div class="pv-brand">ManaLilia</div>
+        </div>
         <div class="body">
-          <div class="tag">案C（ロゴ調・本番内容）</div>
-          <h2>エレガント／ダーク</h2>
-          <p class="desc">ゴールド×ダークブラウンで高級感のある落ち着いた印象。大人っぽく上質に。</p>
+          <div class="tag">Font C</div>
+          <h2>欧文エレガント</h2>
+          <p class="desc">②をベースに、アルファベットだけ繊細なセリフに。ファッション誌・ブランドサイトのような雰囲気。</p>
+          <div class="specs">見出し：Shippori Mincho B1／本文：Zen Kaku Gothic New<br>欧文：Cormorant Garamond（繊細セリフ）</div>
           <span class="go">この案を見る →</span>
         </div>
       </a>
     </div>
 
-    <p class="note">3案とも、ロゴ（ゴールドの世界観）に合わせた<strong>レイアウト違い</strong>です。メニュー・料金は実際の内容を反映しています（<strong>開催日程のみ仮</strong>）。お好みの案・組み合わせをお選びください。</p>
-    <p class="foot">mana lilia barreton studio</p>
+    <p class="note">メニュー・料金は実際の内容を反映しています（<strong>開催日程のみ仮</strong>）。お好みのフォント案をお選びください。</p>
+    <p class="foot">ManaLilia Movement Studio</p>
   </div>
 </body>
 </html>
