@@ -58,8 +58,12 @@
     .feed-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:46px}
     .feed-ph{aspect-ratio:3/4;border-radius:26px;overflow:hidden;box-shadow:0 14px 34px rgba(120,95,55,.16)}
     .feed-ph img{width:100%;height:100%;object-fit:cover;display:block}
-    .feed-row .feed-ph:nth-child(2){margin-top:32px}
-    @media(max-width:680px){.feed-row{grid-template-columns:1fr 1fr}.feed-row .feed-ph:nth-child(3){display:none}.feed-row .feed-ph:nth-child(2){margin-top:0}}
+    .feed-row .feed-ph:nth-child(2),.feed-row .feed-ph:nth-child(5){margin-top:32px}
+    .feed-ph.ph-empty{background:linear-gradient(160deg,#fdf8ee,#f0e7d6);border:1.5px dashed var(--gold-lt);box-shadow:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:20px}
+    .ph-empty svg{stroke:var(--gold)}
+    .ph-empty span{font-size:13px;letter-spacing:.1em;color:var(--gold-dk)}
+    .ph-empty small{font-size:11.5px;color:var(--soft)}
+    @media(max-width:680px){.feed-row{grid-template-columns:1fr 1fr}.feed-row .feed-ph:nth-child(2),.feed-row .feed-ph:nth-child(5){margin-top:0}}
 
     .soft-card{background:var(--card);border-radius:30px;padding:54px;box-shadow:0 16px 40px rgba(120,95,55,.1)}
     .about{text-align:center}
@@ -156,6 +160,18 @@
       <div class="feed-ph"><img src="../img/g4.jpg" alt="ManaLilia バレエ"></div>
       <div class="feed-ph"><img src="../img/hero.jpg" alt="ManaLilia 月夜のダンス"></div>
       <div class="feed-ph"><img src="../img/g2.jpg" alt="スタジオの雰囲気"></div>
+      <div class="feed-ph ph-empty">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 8a2 2 0 0 1 2-2h2l1.5-2h7L17 6h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.5"/></svg>
+        <span>Photo 04</span><small>レッスン風景の写真が入ります</small>
+      </div>
+      <div class="feed-ph ph-empty">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 8a2 2 0 0 1 2-2h2l1.5-2h7L17 6h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.5"/></svg>
+        <span>Photo 05</span><small>スタジオの雰囲気の写真が入ります</small>
+      </div>
+      <div class="feed-ph ph-empty">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 8a2 2 0 0 1 2-2h2l1.5-2h7L17 6h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.5"/></svg>
+        <span>Photo 06</span><small>おすすめの1枚が入ります</small>
+      </div>
     </div>
   </div></section>
 
