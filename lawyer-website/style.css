@@ -283,6 +283,32 @@ header {
 /* ===== 取扱分野 ===== */
 .practice { background: var(--gray-lt); }
 
+.practice-group {
+  margin-bottom: 56px;
+}
+
+.practice-group:last-of-type {
+  margin-bottom: 0;
+}
+
+.practice-group-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  padding-left: 14px;
+  border-left: 4px solid var(--gold);
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  margin-bottom: 24px;
+}
+
+.practice-note {
+  text-align: center;
+  color: var(--gray-md);
+  font-size: 14px;
+  margin-top: 48px;
+}
+
 .practice-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -574,6 +600,12 @@ header {
 .form-group select option {
   background: var(--navy-mid);
   color: var(--white);
+}
+
+.form-group select optgroup {
+  background: var(--navy-mid);
+  color: rgba(255,255,255,0.55);
+  font-style: normal;
 }
 
 .form-group input:focus,
