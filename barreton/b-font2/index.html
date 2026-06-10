@@ -11,16 +11,20 @@
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
-      --ink:#4a4138; --soft:#8a7f6e; --cream:#f8f2e7; --cream2:#f0e7d6; --card:#fffdf8;
+      --ink:#4a4138; --soft:#756853; --cream:#f8f2e7; --cream2:#f0e7d6; --card:#fffdf8;
       --gold:#b6904c; --gold-lt:#cdab6c; --gold-dk:#947338; --blush:#ecd6c9; --line:#ece2d0;
       --brown:#5a4332;
     }
-    body{font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;color:var(--ink);background:var(--cream);line-height:2;font-size:16px;-webkit-font-smoothing:antialiased}
+    body{font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;color:var(--ink);background:var(--cream);line-height:2;font-size:16px;font-weight:500}
     .serif{font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif}
+    /* 文節単位の改行（「る。」だけ次行に行くのを防ぐ） */
+    .phr{display:inline-block}
+    .hero h1,.h2,.poem{text-wrap:balance}
+    .hero p,.about .lead{word-break:auto-phrase}
     a{color:inherit;text-decoration:none}
     .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
     section{padding:96px 0}
-    .label{display:inline-block;font-size:11px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+    .label{display:inline-block;font-size:12px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
     .h2{font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:500;letter-spacing:.06em;line-height:1.5;color:var(--brown)}
     .pill-btn{display:inline-block;background:var(--gold);color:#fff;padding:15px 40px;border-radius:40px;font-weight:600;font-size:14px;letter-spacing:.06em;box-shadow:0 10px 24px rgba(182,144,76,.28);transition:.25s}
     .pill-btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(182,144,76,.36)}
@@ -63,21 +67,21 @@
     .chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:10px}
     .chip{background:var(--cream2);border-radius:30px;padding:12px 24px;text-align:left;min-width:200px}
     .chip b{display:block;color:var(--gold-dk);letter-spacing:.08em;font-size:14px}
-    .chip span{font-size:12.5px;color:var(--soft)}
+    .chip span{font-size:13px;color:var(--soft)}
     .teacher{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:36px;padding-top:34px;border-top:1px solid var(--line);text-align:left}
     .teacher img{width:92px;height:92px;border-radius:50%;object-fit:cover;flex-shrink:0}
     .teacher h3{font-size:17px;color:var(--gold-dk);margin:4px 0;letter-spacing:.08em}
-    .teacher p{font-size:13px;color:var(--soft)}
+    .teacher p{font-size:13.5px;color:var(--soft)}
     @media(max-width:600px){.soft-card{padding:36px 24px}.teacher{flex-direction:column;text-align:center}}
 
     .menu-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
     .mcard{background:var(--card);border-radius:24px;padding:30px 30px}
     .mcard .t{font-size:12px;color:var(--gold);letter-spacing:.08em;margin-bottom:8px}
     .mcard h3{font-size:18px;font-weight:500;margin-bottom:6px}
-    .mcard p{font-size:13.5px;color:var(--soft)}
+    .mcard p{font-size:14px;color:var(--soft)}
     .feebar{margin-top:24px;background:var(--blush);border-radius:30px;padding:18px 28px;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:center;font-size:14px}
     .feebar b{color:var(--gold-dk);font-weight:600}
-    .feenote{margin-top:12px;font-size:12px;color:var(--soft)}
+    .feenote{margin-top:12px;font-size:12.5px;color:var(--soft)}
     .mcard.wide{grid-column:1/-1;background:linear-gradient(135deg,var(--card),#fbf3e4);border:1px solid var(--line)}
     @media(max-width:680px){.menu-cards{grid-template-columns:1fr}.mcard.wide{grid-column:auto}}
 
@@ -85,15 +89,15 @@
     .step{background:var(--cream2);border-radius:20px;padding:22px 18px}
     .step .num{font-family:"Shippori Mincho B1",serif;font-size:26px;color:var(--gold);line-height:1;margin-bottom:8px}
     .step b{display:block;color:var(--gold-dk);font-size:14px;letter-spacing:.06em;margin-bottom:4px}
-    .step p{font-size:12.5px;color:var(--soft)}
-    .belongings{font-size:13.5px;color:var(--soft);text-align:center}
+    .step p{font-size:13px;color:var(--soft)}
+    .belongings{font-size:14px;color:var(--soft);text-align:center}
     .belongings b{color:var(--gold-dk);font-weight:600}
     @media(max-width:680px){.steps{grid-template-columns:1fr}}
 
     .faq{max-width:680px;margin:0 auto;text-align:left}
     .faq details{background:var(--card);border-radius:18px;padding:16px 24px;margin-bottom:12px;box-shadow:0 8px 22px rgba(120,95,55,.07)}
     .faq summary{cursor:pointer;font-weight:600;font-size:14.5px;color:var(--gold-dk);letter-spacing:.04em;list-style-position:outside}
-    .faq details p{font-size:13.5px;color:var(--soft);margin-top:10px}
+    .faq details p{font-size:14px;color:var(--soft);margin-top:10px}
 
     .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
     .pill-btn.ghost{background:transparent;color:var(--gold-dk);border:1.5px solid var(--gold);box-shadow:none}
@@ -109,7 +113,7 @@
     .loc{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     .lcard{background:var(--card);border-radius:24px;padding:30px;text-align:center}
     .lcard h3{color:var(--gold-dk);letter-spacing:.08em;margin-bottom:6px}
-    .lcard p{font-size:13.5px;color:var(--soft)}
+    .lcard p{font-size:14px;color:var(--soft)}
     @media(max-width:680px){.loc{grid-template-columns:1fr}}
 
     .cta{text-align:center;background:radial-gradient(70% 80% at 50% 0,#f6e6dc,var(--cream))}
@@ -141,13 +145,13 @@
   <section class="hero" id="top"><div class="wrap hero-inner">
     <p class="kick">EXPRESSION · MOVEMENT</p>
     <img class="hero-logo" src="../img/logo.jpg" alt="ManaLilia Movement Studio">
-    <h1 class="serif">踊るように、ととのえる。</h1>
-    <p>バレトンを軸に、からだ・こころ・くらしを整えるスタジオ。やさしい時間で、しなやかなわたしへ。</p>
+    <h1 class="serif"><span class="phr">踊るように、</span><span class="phr">ととのえる。</span></h1>
+    <p><span class="phr">バレトンを軸に、</span><span class="phr">からだ・こころ・くらしを</span><span class="phr">整えるスタジオ。</span><span class="phr">やさしい時間で、</span><span class="phr">しなやかなわたしへ。</span></p>
     <a class="pill-btn" href="#contact">体験・ご予約はこちら</a>
   </div></section>
 
   <section id="expr" class="feed"><div class="wrap">
-    <p class="poem serif">空と音に、溶けるように。<small>うごくほどに、自分がひらいていく時間を。</small></p>
+    <p class="poem serif"><span class="phr">空と音に、</span><span class="phr">溶けるように。</span><small><span class="phr">うごくほどに、</span><span class="phr">自分がひらいていく時間を。</span></small></p>
     <div class="feed-row">
       <div class="feed-ph"><img src="../img/g4.jpg" alt="ManaLilia バレエ"></div>
       <div class="feed-ph"><img src="../img/hero.jpg" alt="ManaLilia 月夜のダンス"></div>
@@ -271,8 +275,8 @@
   <section id="contact" class="cta"><div class="wrap">
     <p class="label">Contact</p>
     <h2 class="h2 serif" style="margin-bottom:18px">まずは、お気軽に。</h2>
-    <p>体験・ご予約・ご相談など、どうぞお気軽にお問い合わせください。</p>
-    <p class="ways">グループレッスンは「レッスン希望」、個別セッションは「セッション希望」とお送りください</p>
+    <p><span class="phr">体験・ご予約・ご相談など、</span><span class="phr">どうぞお気軽に</span><span class="phr">お問い合わせください。</span></p>
+    <p class="ways"><span class="phr">グループレッスンは「レッスン希望」、</span><span class="phr">個別セッションは「セッション希望」と</span><span class="phr">お送りください</span></p>
     <div class="cta-btns">
       <a class="pill-btn" href="https://www.instagram.com/manalilia2222/" target="_blank" rel="noopener">＠manalilia2222 へDM</a>
       <a class="pill-btn ghost" href="https://line.me/R/ti/p/%40045owdrn" target="_blank" rel="noopener">LINEで予約する</a>
