@@ -11,7 +11,7 @@
   --gold:    #b8965a;
   --gold-lt: #d4b07a;
   --gray-dk: #333740;
-  --gray-md: #666c77;
+  --gray-md: #50565f;
   --gray-lt: #f4f5f7;
   --white:   #ffffff;
   --border:  #dde1e8;
@@ -27,8 +27,8 @@ html {
 
 body {
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 17px;
+  line-height: 1.85;
   color: var(--gray-dk);
   background: var(--white);
 }
@@ -106,8 +106,8 @@ header {
 }
 
 .nav-links a {
-  color: rgba(255,255,255,0.85);
-  font-size: 14px;
+  color: rgba(255,255,255,0.95);
+  font-size: 15px;
   letter-spacing: 0.04em;
   transition: color var(--transition);
 }
@@ -182,8 +182,8 @@ header {
 }
 
 .hero-sub {
-  color: var(--gold);
-  font-size: 13px;
+  color: var(--gold-lt);
+  font-size: 14px;
   letter-spacing: 0.25em;
   margin-bottom: 20px;
   font-weight: 600;
@@ -199,8 +199,8 @@ header {
 }
 
 .hero-desc {
-  color: rgba(255,255,255,0.72);
-  font-size: 16px;
+  color: rgba(255,255,255,0.88);
+  font-size: 17px;
   line-height: 1.9;
   margin-bottom: 40px;
 }
@@ -230,7 +230,7 @@ header {
 }
 
 .section-label {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--gold);
@@ -277,7 +277,7 @@ header {
 .about-text p {
   color: var(--gray-md);
   margin-bottom: 18px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 /* ===== 取扱分野 ===== */
@@ -292,7 +292,7 @@ header {
 }
 
 .practice-group-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--navy);
   padding-left: 14px;
@@ -305,7 +305,7 @@ header {
 .practice-note {
   text-align: center;
   color: var(--gray-md);
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 48px;
 }
 
@@ -348,7 +348,7 @@ header {
 }
 
 .practice-card h3 {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--navy);
   margin-bottom: 12px;
@@ -356,9 +356,9 @@ header {
 }
 
 .practice-card p {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--gray-md);
-  line-height: 1.8;
+  line-height: 1.9;
 }
 
 /* ===== 弁護士紹介 ===== */
@@ -424,7 +424,7 @@ header {
 }
 
 .attorney-title {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--gold);
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -445,7 +445,7 @@ header {
 }
 
 .attorney-details li {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--gray-md);
   padding: 3px 0;
   padding-left: 14px;
@@ -462,10 +462,9 @@ header {
 }
 
 .attorney-message {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--gray-md);
-  font-style: italic;
-  line-height: 1.75;
+  line-height: 1.85;
   border-left: 3px solid var(--gold);
   padding-left: 14px;
   background: rgba(184,150,90,0.05);
@@ -481,8 +480,8 @@ header {
 .contact .section-title { margin-bottom: 16px; }
 
 .contact-intro {
-  color: rgba(255,255,255,0.7);
-  font-size: 15px;
+  color: rgba(255,255,255,0.88);
+  font-size: 16px;
   margin-bottom: 56px;
   line-height: 2;
 }
@@ -522,7 +521,7 @@ header {
 .contact-icon svg { width: 100%; height: 100%; }
 
 .contact-label {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--gold);
@@ -531,15 +530,15 @@ header {
 }
 
 .contact-value {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 700;
   color: var(--white);
   letter-spacing: 0.03em;
 }
 
 .contact-note {
-  font-size: 12px;
-  color: rgba(255,255,255,0.5);
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
   margin-top: 2px;
 }
 
@@ -559,9 +558,9 @@ header {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.95);
   margin-bottom: 8px;
   letter-spacing: 0.03em;
 }
@@ -569,7 +568,7 @@ header {
 .required {
   background: var(--gold);
   color: var(--white);
-  font-size: 10px;
+  font-size: 11px;
   padding: 2px 7px;
   border-radius: 3px;
   font-weight: 700;
@@ -584,7 +583,7 @@ header {
   border: 1px solid rgba(255,255,255,0.15);
   border-radius: var(--radius);
   padding: 12px 16px;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--white);
   font-family: inherit;
   transition: border-color var(--transition), background var(--transition);
@@ -594,7 +593,7 @@ header {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.5);
 }
 
 .form-group select option {
@@ -627,7 +626,7 @@ header {
   border: none;
   border-radius: var(--radius);
   padding: 15px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.08em;
   cursor: pointer;
@@ -646,8 +645,8 @@ header {
 }
 
 .form-note {
-  font-size: 11px;
-  color: rgba(255,255,255,0.35);
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
   text-align: center;
   margin-top: 14px;
   line-height: 1.7;
@@ -681,8 +680,8 @@ header {
 }
 
 .footer-nav a {
-  font-size: 13px;
-  color: rgba(255,255,255,0.5);
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
   transition: color var(--transition);
 }
 
@@ -695,19 +694,19 @@ header {
 }
 
 .footer-bottom p {
-  font-size: 12px;
-  color: rgba(255,255,255,0.35);
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
 }
 
 .footer-note {
-  font-size: 12px;
-  color: rgba(255,255,255,0.25);
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
 }
 
 /* ===== レスポンシブ ===== */
 @media (max-width: 900px) {
   .nav-links { gap: 20px; }
-  .nav-links li:not(:last-child) a { font-size: 13px; }
+  .nav-links li:not(:last-child) a { font-size: 14px; }
 
 
   .practice-grid { grid-template-columns: repeat(2, 1fr); }
@@ -753,9 +752,9 @@ header {
 }
 
 .subpage-desc {
-  color: rgba(255,255,255,0.72);
+  color: rgba(255,255,255,0.88);
   margin-top: 16px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.9;
 }
 
@@ -792,7 +791,7 @@ header {
 .column-cat {
   background: var(--navy);
   color: var(--white);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   padding: 4px 13px;
   border-radius: 3px;
@@ -801,7 +800,7 @@ header {
 
 .column-date {
   color: var(--gray-md);
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.06em;
 }
 
@@ -815,7 +814,7 @@ header {
 
 .column-card-excerpt {
   color: var(--gray-md);
-  font-size: 14px;
+  font-size: 15px;
   margin-bottom: 18px;
 }
 
@@ -855,7 +854,7 @@ header {
 
 .column-empty-text {
   color: var(--gray-md);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.9;
 }
 
@@ -878,7 +877,7 @@ header {
 .article-container { max-width: 760px; }
 
 .article-lead {
-  font-size: 17px;
+  font-size: 18px;
   color: var(--gray-dk);
   font-weight: 500;
   line-height: 1.95;
@@ -897,7 +896,7 @@ header {
 .article-body-section p {
   color: var(--gray-dk);
   margin-bottom: 20px;
-  font-size: 15.5px;
+  font-size: 16.5px;
 }
 
 .article-note {
@@ -905,9 +904,9 @@ header {
   padding: 18px 22px;
   background: var(--gray-lt);
   border-radius: var(--radius);
-  font-size: 13px;
+  font-size: 14px;
   color: var(--gray-md);
-  line-height: 1.85;
+  line-height: 1.9;
 }
 
 .back-link {
