@@ -27,8 +27,8 @@ html {
 
 body {
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
-  font-size: 17px;
-  line-height: 1.85;
+  font-size: 18px;
+  line-height: 1.9;
   color: var(--gray-dk);
   background: var(--white);
 }
@@ -92,7 +92,7 @@ header {
 }
 
 .logo-text {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.08em;
   color: var(--white);
@@ -107,7 +107,7 @@ header {
 
 .nav-links a {
   color: rgba(255,255,255,0.95);
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0.04em;
   transition: color var(--transition);
 }
@@ -183,7 +183,7 @@ header {
 
 .hero-sub {
   color: var(--gold-lt);
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.25em;
   margin-bottom: 20px;
   font-weight: 600;
@@ -199,8 +199,8 @@ header {
 }
 
 .hero-desc {
-  color: rgba(255,255,255,0.88);
-  font-size: 17px;
+  color: rgba(255,255,255,0.92);
+  font-size: 18px;
   line-height: 1.9;
   margin-bottom: 40px;
 }
@@ -209,9 +209,9 @@ header {
   display: inline-block;
   background: var(--gold);
   color: var(--white);
-  padding: 15px 40px;
+  padding: 16px 44px;
   border-radius: var(--radius);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
   letter-spacing: 0.05em;
   transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
@@ -230,7 +230,7 @@ header {
 }
 
 .section-label {
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--gold);
@@ -241,7 +241,7 @@ header {
 .section-label.light { color: var(--gold-lt); }
 
 .section-title {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
   font-weight: 700;
   color: var(--navy);
   margin-bottom: 56px;
@@ -277,7 +277,7 @@ header {
 .about-text p {
   color: var(--gray-md);
   margin-bottom: 18px;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 /* ===== 取扱分野 ===== */
@@ -292,7 +292,7 @@ header {
 }
 
 .practice-group-title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--navy);
   padding-left: 14px;
@@ -305,7 +305,7 @@ header {
 .practice-note {
   text-align: center;
   color: var(--gray-md);
-  font-size: 16px;
+  font-size: 17px;
   margin-top: 48px;
 }
 
@@ -348,7 +348,7 @@ header {
 }
 
 .practice-card h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--navy);
   margin-bottom: 12px;
@@ -356,7 +356,7 @@ header {
 }
 
 .practice-card p {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--gray-md);
   line-height: 1.9;
 }
@@ -417,14 +417,14 @@ header {
 }
 
 .attorney-info h3 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--navy);
   letter-spacing: 0.04em;
 }
 
 .attorney-title {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--gold);
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -445,7 +445,7 @@ header {
 }
 
 .attorney-details li {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--gray-md);
   padding: 3px 0;
   padding-left: 14px;
@@ -462,7 +462,7 @@ header {
 }
 
 .attorney-message {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--gray-md);
   line-height: 1.85;
   border-left: 3px solid var(--gold);
@@ -480,8 +480,8 @@ header {
 .contact .section-title { margin-bottom: 16px; }
 
 .contact-intro {
-  color: rgba(255,255,255,0.88);
-  font-size: 16px;
+  color: rgba(255,255,255,0.92);
+  font-size: 17px;
   margin-bottom: 56px;
   line-height: 2;
 }
@@ -521,7 +521,7 @@ header {
 .contact-icon svg { width: 100%; height: 100%; }
 
 .contact-label {
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--gold);
@@ -530,15 +530,15 @@ header {
 }
 
 .contact-value {
-  font-size: 19px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--white);
   letter-spacing: 0.03em;
 }
 
 .contact-note {
-  font-size: 14px;
-  color: rgba(255,255,255,0.8);
+  font-size: 15px;
+  color: rgba(255,255,255,0.85);
   margin-top: 2px;
 }
 
@@ -558,7 +558,7 @@ header {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: rgba(255,255,255,0.95);
   margin-bottom: 8px;
@@ -568,7 +568,7 @@ header {
 .required {
   background: var(--gold);
   color: var(--white);
-  font-size: 11px;
+  font-size: 12px;
   padding: 2px 7px;
   border-radius: 3px;
   font-weight: 700;
@@ -582,8 +582,8 @@ header {
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.15);
   border-radius: var(--radius);
-  padding: 12px 16px;
-  font-size: 16px;
+  padding: 13px 16px;
+  font-size: 17px;
   color: var(--white);
   font-family: inherit;
   transition: border-color var(--transition), background var(--transition);
@@ -625,8 +625,8 @@ header {
   color: var(--white);
   border: none;
   border-radius: var(--radius);
-  padding: 15px;
-  font-size: 16px;
+  padding: 16px;
+  font-size: 17px;
   font-weight: 700;
   letter-spacing: 0.08em;
   cursor: pointer;
@@ -645,8 +645,8 @@ header {
 }
 
 .form-note {
-  font-size: 13px;
-  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
   text-align: center;
   margin-top: 14px;
   line-height: 1.7;
@@ -680,8 +680,8 @@ header {
 }
 
 .footer-nav a {
-  font-size: 14px;
-  color: rgba(255,255,255,0.75);
+  font-size: 15px;
+  color: rgba(255,255,255,0.8);
   transition: color var(--transition);
 }
 
@@ -694,19 +694,19 @@ header {
 }
 
 .footer-bottom p {
-  font-size: 13px;
-  color: rgba(255,255,255,0.65);
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
 }
 
 .footer-note {
-  font-size: 13px;
-  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
 }
 
 /* ===== レスポンシブ ===== */
 @media (max-width: 900px) {
   .nav-links { gap: 20px; }
-  .nav-links li:not(:last-child) a { font-size: 14px; }
+  .nav-links li:not(:last-child) a { font-size: 15px; }
 
 
   .practice-grid { grid-template-columns: repeat(2, 1fr); }
@@ -724,7 +724,7 @@ header {
   .navbar { height: 60px; }
   .nav-links { display: none; }
 
-  .hero h1 { font-size: 1.8rem; }
+  .hero h1 { font-size: 2rem; }
 
 
   .practice-grid { grid-template-columns: 1fr; }
@@ -752,9 +752,9 @@ header {
 }
 
 .subpage-desc {
-  color: rgba(255,255,255,0.88);
+  color: rgba(255,255,255,0.92);
   margin-top: 16px;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.9;
 }
 
@@ -791,7 +791,7 @@ header {
 .column-cat {
   background: var(--navy);
   color: var(--white);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   padding: 4px 13px;
   border-radius: 3px;
@@ -800,12 +800,12 @@ header {
 
 .column-date {
   color: var(--gray-md);
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.06em;
 }
 
 .column-card-title {
-  font-size: 19px;
+  font-size: 21px;
   font-weight: 700;
   color: var(--navy);
   line-height: 1.6;
@@ -814,14 +814,14 @@ header {
 
 .column-card-excerpt {
   color: var(--gray-md);
-  font-size: 15px;
+  font-size: 16px;
   margin-bottom: 18px;
 }
 
 .column-readmore {
   color: var(--gold);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0.03em;
 }
 
@@ -835,7 +835,7 @@ header {
 }
 
 .column-empty-title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--navy);
   letter-spacing: 0.08em;
@@ -854,7 +854,7 @@ header {
 
 .column-empty-text {
   color: var(--gray-md);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.9;
 }
 
@@ -877,7 +877,7 @@ header {
 .article-container { max-width: 760px; }
 
 .article-lead {
-  font-size: 18px;
+  font-size: 19px;
   color: var(--gray-dk);
   font-weight: 500;
   line-height: 1.95;
@@ -885,7 +885,7 @@ header {
 }
 
 .article-body-section h2 {
-  font-size: 21px;
+  font-size: 23px;
   color: var(--navy);
   margin: 44px 0 18px;
   padding-left: 16px;
@@ -896,7 +896,7 @@ header {
 .article-body-section p {
   color: var(--gray-dk);
   margin-bottom: 20px;
-  font-size: 16.5px;
+  font-size: 17.5px;
 }
 
 .article-note {
@@ -904,7 +904,7 @@ header {
   padding: 18px 22px;
   background: var(--gray-lt);
   border-radius: var(--radius);
-  font-size: 14px;
+  font-size: 15px;
   color: var(--gray-md);
   line-height: 1.9;
 }
@@ -914,7 +914,7 @@ header {
   margin-top: 40px;
   color: var(--gold);
   font-weight: 700;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .back-link:hover { color: var(--gold-lt); }
